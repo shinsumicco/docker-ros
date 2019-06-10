@@ -11,7 +11,7 @@
 # Dockerfileが配置されたディレクトリに移動
 $ cd /path/to/ros-kinetic-on-docker/standard
 # docker buildを実行
-$ docker build --tag ros:kinetic-desktop-standard
+$ docker build --tag ros:kinetic-desktop-standard .
 ```
 
 ## 動作確認

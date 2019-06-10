@@ -1,17 +1,20 @@
 FROM osrf/ros:kinetic-desktop-full
 
-# install the minumum packages 
-RUN apt update
-RUN apt upgrade -y
-RUN apt install -y git vim bash-completion
+ENV DEBIAN_FRONTEND noninteractive
+ENV DEBCONF_NOWARNINGS yes
 
-# install user packages here
-RUN apt install -yq build-essential
-
-# remove caches
-RUN apt autoremove -y
-RUN apt clean -y
-RUN rm -rf /var/lib/apt/lists/
+# install packages
+RUN set -x && \
+  apt-get update && \
+  apt-get upgrade -y --no-install-recommends --allow-unauthenticated && \
+  : "install the minumum packages " && \
+  apt-get install -yq --no-install-recommends git vim bash-completion && \
+  : "install user packages" && \
+  apt-get install -yq --no-install-recommends  build-essential && \
+  : "remove caches" && \
+  apt-get autoremove -y && \
+  apt-get clean -y && \
+  rm -rf /var/lib/apt/lists/
 
 # setup entrypoint
 COPY ./ros_entrypoint.sh /

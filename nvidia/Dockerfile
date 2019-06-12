@@ -60,7 +60,7 @@ RUN set -x && \
   apt-get update && \
   apt-get upgrade -y --no-install-recommends --allow-unauthenticated && \
   : "install user packages" && \
-  apt-get install -yq --no-install-recommends build-essential && \
+  apt-get install -yq --no-install-recommends sudo build-essential && \
   : "remove caches" && \
   apt-get autoremove -y && \
   apt-get clean -y && \

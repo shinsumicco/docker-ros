@@ -17,7 +17,7 @@ RUN set -x && \
   : "install the minumum packages " && \
   apt-get install -yq --no-install-recommends git vim bash-completion && \
   : "install user packages" && \
-  apt-get install -yq --no-install-recommends  build-essential && \
+  apt-get install -yq --no-install-recommends sudo build-essential && \
   : "remove caches" && \
   apt-get autoremove -y && \
   apt-get clean -y && \

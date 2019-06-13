@@ -39,4 +39,4 @@ docker run -it --rm --runtime=nvidia \
     --volume "/etc/sudoers.d:/etc/sudoers.d:ro" \
     --volume "/tmp/.X11-unix:/tmp/.X11-unix:rw" \
     $OPTIONS \
-    ros:kinetic-desktop-nvidia
+    shinsumicco/ros:kinetic-desktop-nvidia

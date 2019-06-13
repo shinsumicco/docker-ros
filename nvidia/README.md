@@ -13,7 +13,7 @@
 # Dockerfileが配置されたディレクトリに移動
 $ cd /path/to/ros-kinetic-on-docker/nvidia
 # docker buildを実行
-$ docker build --tag ros:kinetic-desktop-nvidia .
+$ docker build --tag shinsumicco/ros:kinetic-desktop-nvidia .
 ```
 
 ## 動作確認

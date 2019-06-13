@@ -66,7 +66,7 @@ OPTIONS: --name ros_test
 
 ホームディレクトリの権限を修正する．
 ```bash
-$ sudo chown $USER .
+$ sudo chown -R $USER:$USER .
 ```
 
 roscoreを起動する．
@@ -109,7 +109,7 @@ OPTIONS: --name rviz --net rosnet --env ROS_HOSTNAME=rviz --env ROS_MASTER_URI=h
 
 ホームディレクトリの権限を修正する．
 ```bash
-$ sudo chown $USER .
+$ sudo chown -R $USER:$USER .
 ```
 
 rvizを起動する．

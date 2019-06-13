@@ -11,7 +11,7 @@
 
 ```bash
 # Dockerfileが配置されたディレクトリに移動
-$ cd /path/to/ros-kinetic-on-docker/nvidia
+$ cd /path/to/docker-ros/nvidia
 # docker buildを実行
 $ docker build --tag shinsumicco/ros:kinetic-desktop-nvidia .
 ```
@@ -25,7 +25,7 @@ docker network create rosnet
 
 ```bash
 # roscoreのコンテナを起動
-$ cd /path/to/ros-kinetic-on-docker/nvidia
+$ cd /path/to/docker-ros/nvidia
 $ ./run.bash --name roscore --net rosnet
 Usage:
 ./run.bash [OPTIONS]
@@ -58,7 +58,7 @@ started core service [/rosout]
 
 ```bash
 # rvizのコンテナを起動
-$ cd /path/to/ros-kinetic-on-docker/nvidia
+$ cd /path/to/docker-ros/nvidia
 $ ./run.bash --name rviz --net rosnet --env ROS_HOSTNAME=rviz --env ROS_MASTER_URI=http://6f6412fba6a4:11311/
 Usage:
 ./run.bash [OPTIONS]

@@ -1,5 +1,7 @@
 # ROS on docker
 
+[![Docker Build Status](https://img.shields.io/docker/cloud/build/shinsumicco/ros.svg)](https://hub.docker.com/r/shinsumicco/ros)
+
 ROSをdocker上で動かす．  
 rvizなどのOpenGLを使うGUIアプリケーションも多分動くはず．
 

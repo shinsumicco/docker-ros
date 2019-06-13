@@ -28,4 +28,4 @@ COPY ./ros_entrypoint.sh /
 RUN chmod 777 /ros_entrypoint.sh
 
 ENTRYPOINT ["/ros_entrypoint.sh"]
-CMD ["bash"]
+CMD ["/bin/bash"]

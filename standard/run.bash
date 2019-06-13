@@ -4,7 +4,7 @@ echo "Usage:"
 echo "./run.bash [OPTIONS]"
 echo ""
 
-# 第1引数以降を繋げる
+# connect options
 OPTIONS=""
 for x in "$@"
 do
@@ -27,18 +27,16 @@ then
     chmod a+r $XAUTH
 fi
 
-docker run -it \
-    --user=$(id -u):$(id -g) \
-    --env=DISPLAY=$DISPLAY \
-    --env=QT_X11_NO_MITSHM=1 \
-    --workdir="/home/$USER" \
-    --volume="/home/$USER:/home/$USER" \
-    --volume="/etc/group:/etc/group:ro" \
-    --volume="/etc/passwd:/etc/passwd:ro" \
-    --volume="/etc/shadow:/etc/shadow:ro" \
-    --volume="/etc/sudoers.d:/etc/sudoers.d:ro" \
-    --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
-    --rm \
+docker run -it --rm \
+    --user $(id -u):$(id -g) \
+    --env USER=$USER \
+    --env DISPLAY=$DISPLAY \
+    --env QT_X11_NO_MITSHM=1 \
+    --workdir "/home/$USER" \
+    --volume "/etc/group:/etc/group:ro" \
+    --volume "/etc/passwd:/etc/passwd:ro" \
+    --volume "/etc/shadow:/etc/shadow:ro" \
+    --volume "/etc/sudoers.d:/etc/sudoers.d:ro" \
+    --volume "/tmp/.X11-unix:/tmp/.X11-unix:rw" \
     $OPTIONS \
-    ros:kinetic-desktop-standard \
-    /bin/bash
+    ros:kinetic-desktop-standard

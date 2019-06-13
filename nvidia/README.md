@@ -30,7 +30,7 @@ $ ./run.bash --name roscore --net rosnet
 Usage:
 ./run.bash [OPTIONS]
 
-OPTIONS: --name ros_test
+OPTIONS: --name roscore
 
 $ roscore
 

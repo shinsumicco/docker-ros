@@ -30,6 +30,10 @@ Usage:
 
 OPTIONS: --name ros_test
 
+# ホームディレクトリの権限を修正
+$ sudo chown $USER .
+
+# roscoreを起動
 $ roscore
 
 SUMMARY
@@ -59,6 +63,10 @@ Usage:
 
 OPTIONS: --name rviz --net rosnet --env ROS_HOSTNAME=rviz --env ROS_MASTER_URI=http://6f6412fba6a4:11311/
 
+# ホームディレクトリの権限を修正
+$ sudo chown $USER .
+
+# rvizを起動
 $ rosrun rviz rviz
 [ INFO] [1542009344.854182363]: rviz version 1.12.16
 [ INFO] [1542009344.854230633]: compiled against Qt version 5.5.1

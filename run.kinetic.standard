@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Usage:"
-echo "./run.bash [OPTIONS]"
+echo "./run.kinetic.standard [OPTIONS]"
 echo ""
 
 # connect options
@@ -27,7 +27,7 @@ then
     chmod a+r $XAUTH
 fi
 
-docker run -it --rm --runtime=nvidia \
+docker run -it --rm \
     --user $(id -u):$(id -g) \
     --env USER=$USER \
     --env DISPLAY=$DISPLAY \
@@ -39,4 +39,4 @@ docker run -it --rm --runtime=nvidia \
     --volume "/etc/sudoers.d:/etc/sudoers.d:ro" \
     --volume "/tmp/.X11-unix:/tmp/.X11-unix:rw" \
     $OPTIONS \
-    shinsumicco/ros:kinetic-desktop-nvidia
+    shinsumicco/ros:kinetic-desktop-standard

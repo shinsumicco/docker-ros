@@ -1,6 +1,6 @@
-# ROS (kinetic) on docker
+# ROS on docker
 
-ROS(kinetic)をdocker上で動かす．  
+ROSをdocker上で動かす．  
 rvizなどのOpenGLを使うGUIアプリケーションも多分動くはず．
 
 - Linux標準のディスプレイドライバを使っている場合: [standard](./standard)

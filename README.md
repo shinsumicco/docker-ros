@@ -61,7 +61,7 @@ $ ./run.kinetic.standard --name roscore --net rosnet
 Usage:
 ./run.kinetic.standard [OPTIONS]
 
-OPTIONS: --name ros_test
+OPTIONS: --name roscore --net rosnet
 ```
 
 ホームディレクトリの権限を修正する．
